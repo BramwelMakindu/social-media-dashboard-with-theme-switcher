@@ -1,0 +1,368 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.main-container{
+    min-height: 100vh;
+    width: auto;
+    position: relative;
+    background-color: hsl(230, 17%, 14%);
+    z-index: 0;
+    transition: background-color .3s;
+}
+
+.box-head{
+    height: 200px;
+    background-color: hsl(232, 19%, 15%);
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    transition: background-color .3s;
+}
+
+.container{
+    padding: 30px 120px;
+    z-index: 999;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.header-left p{
+    color: hsl(228, 34%, 66%);
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+    color: hsl(228, 34%, 66%);
+}
+
+.header-right p{
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.toggle{
+    height: 25px;
+    width: 55px;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+.toggle-ball{
+    position: absolute;
+    background-color: hsl(230, 17%, 14%);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    left: 2px;
+    transition: 0.5s ease;
+}
+
+.socials{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 2rem;
+}
+
+.facebook, .twitter, .instagram, .youtube{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: hsl(228, 28%, 20%);
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.top img{
+    margin-right: 8px;
+}
+
+.top span{
+    color: hsl(228, 34%, 66%);
+    font-weight: bold;
+}
+
+.middle{
+    margin-bottom: 1.5rem;
+}
+
+.middle h2{
+    color: hsl(0, 0%, 100%);
+    font-size: 45px;
+    text-align: center;
+}
+
+.middle p{
+    letter-spacing: 0.3rem;
+    text-align: center;
+    color: hsl(228, 12%, 44%);
+    margin: 0;
+    padding: 0;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.bottom span{
+    margin-left: 5px;
+    color: hsl(163, 72%, 41%);
+    font-size: 15px;
+}
+
+.youtube .bottom span{
+    color: hsl(356, 69%, 56%);
+}
+
+.facebook{
+    border-top: 4px solid hsl(208, 92%, 53%);
+}
+.twitter{
+    border-top: 4px solid hsl(203, 89%, 53%);
+}
+.instagram{
+    border-top: 4px solid;
+    border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1;
+}
+.youtube{
+    border-top: 4px solid hsl(348, 97%, 39%);
+}
+
+.facebook:hover, .twitter:hover, .instagram:hover, .youtube:hover{
+    background-color: hsl(228, 24%, 24%);
+}
+
+/*-------overview------*/
+
+.overview{
+    margin-top: 1.5rem;
+}
+
+.overview h1{
+    margin-bottom: 1rem;
+    color: hsl(0, 0%, 100%);
+    font-size: 25px;
+}
+
+.overview-container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.facebook-overview, .twitter-overview, .instagram-overview, .youtube-overview{
+    padding: 20px;
+    background-color: hsl(228, 28%, 20%);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color .2s;
+}
+
+.overview-top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.overview-top span{
+    color: hsl(228, 34%, 66%);
+    font-weight: bold;
+}
+
+.overview-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.overview-bottom h2{
+    color: hsl(0, 0%, 100%);
+}
+
+.overview-bottom span{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: hsl(163, 72%, 41%);
+    font-weight: bold;
+}
+
+.overview-bottom span img{
+    margin-right: 5px;
+}
+
+.overview-bottom.red span{
+    color: hsl(356, 69%, 56%);
+}
+
+.facebook-overview:hover, .twitter-overview:hover, .instagram-overview:hover, .youtube-overview:hover{
+    background-color: hsl(228, 24%, 24%);
+}
+
+footer{
+    margin-top: 1rem;
+}
+
+.attribution{
+    text-align: center;
+    color: hsl(228, 12%, 44%);
+}
+
+.attribution a{
+    color: white;
+}
+
+
+
+
+/*-------for light mode-------*/
+
+.main-container.active{
+    background-color: hsl(0, 0%, 100%);
+}
+
+.box-head.active{
+    background-color: hsl(225, 100%, 98%);
+}
+
+.header-left.active h2{
+    color: hsl(230, 17%, 14%);
+}
+
+.header-left.active p{
+    color: hsl(228, 12%, 44%);
+}
+
+.header-right.active{
+    color: hsl(228, 12%, 44%);
+}
+
+.toggle.active{
+    background-image: unset;
+    background-color: hsl(230, 22%, 74%);
+}
+
+.toggle-ball.active{
+    transform: translateX(31px);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.facebook.active, .twitter.active, .instagram.active, .youtube.active{
+    background-color: hsl(227, 47%, 96%);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.facebook.active:hover, .twitter.active:hover, .instagram.active:hover, .youtube.active:hover{
+    background-color: rgb(226, 227, 229);
+}
+
+.facebook.active .top span, .twitter.active .top span, .instagram.active .top span, .youtube.active .top span{
+    color: hsl(228, 12%, 44%);
+}
+
+.facebook.active .middle h2, .twitter.active .middle h2, .instagram.active .middle h2, .youtube.active .middle h2{
+    color: hsl(230, 17%, 14%);
+}
+
+.facebook.active .middle p, .twitter.active .middle p, .instagram.active .middle p, .youtube.active .middle p{
+    color: hsl(228, 12%, 44%);
+}
+
+.overview.active h1{
+    color: hsl(228, 12%, 44%);
+}
+
+.facebook-overview.active, .twitter-overview.active, .instagram-overview.active, .youtube-overview.active{
+    background-color: hsl(227, 47%, 96%);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.facebook-overview.active:hover, .twitter-overview.active:hover, .instagram-overview.active:hover, .youtube-overview.active:hover{
+    background-color: rgb(226, 227, 229);
+}
+
+.facebook-overview.active .overview-bottom h2, .twitter-overview.active .overview-bottom h2, .instagram-overview.active .overview-bottom h2, .youtube-overview.active .overview-bottom h2{
+    color: hsl(230, 17%, 14%);
+}
+.facebook-overview.active .overview-top span, .twitter-overview.active .overview-top span, .instagram-overview.active .overview-top span, .youtube-overview.active .overview-top span{
+    color: hsl(228, 12%, 44%);
+}
+
+.attribution.active a{
+    color: hsl(228, 28%, 20%);
+}
+
+
+
+/*--------for small screens------*/
+
+@media (min-width: 600px) and (max-width: 1000px){
+    .socials{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .overview-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .attribution{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .container{
+        padding: unset;
+        padding: 30px;
+    }
+
+    .header{
+        display: block;
+    }
+
+    .header-left{
+        margin-bottom: 1rem;
+    }
+
+    .header-right{
+        justify-content: space-between;
+    }
+
+    .socials{
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: 1fr;
+    }
+
+    .overview-container{
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: 1fr;
+    }
+
+    .attribution{
+        font-size: 10px;
+    }
+}
